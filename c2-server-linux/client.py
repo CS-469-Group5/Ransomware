@@ -10,10 +10,6 @@ BUFFER_SIZE = 1024
 s = socket.socket()
 s.connect((SERVER_HOST, SERVER_PORT))
 
-# receive connection message
-message = s.recv(BUFFER_SIZE).decode()
-print("[SERVER]:", message)
-
 while True:
     # receive command from server
     command = s.recv(BUFFER_SIZE).decode('utf-16')
