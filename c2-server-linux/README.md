@@ -17,6 +17,7 @@ message that says the two are connected. You have successfully performed a rever
 issue commands on the client/victim.
 
 ### Future Work
+* Figure how to check if two machines are on different networks and if they're able to connect
 * Create an executable for the client.py to run in background of victim's machine
 * Execute code on victim's machine from server
 * Develop a web interface using the Flask framework for easier use
