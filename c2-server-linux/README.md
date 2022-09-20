@@ -18,7 +18,7 @@ issue commands on the client/victim.
 
 ### Future Work
 * Create an executable for the client.py to run in background of victim's machine
-* Execute code on victim's machine
+* Execute code on victim's machine from server
 * Develop a web interface using the Flask framework for easier use
 * Resolve any unintentional breadcrumbs
 * Persist
