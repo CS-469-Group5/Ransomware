@@ -13,7 +13,7 @@ If it is between two machines on the same wifi, you can use `ifconfig` to find t
 
 Once the IP addresses are set, run `python3 server.py` where it will begin listening for a connection.
 Afterwards, run `python3 client.py [IP]` to connect the two machines. From the server-side, you should receieve a 
-message that says the two are connected. You have successfully performed a reverse shell and can
+message that says the two are connected as well as the working directory. You have successfully performed a reverse shell and can
 issue commands on the client/victim.
 
 ### Future Work
