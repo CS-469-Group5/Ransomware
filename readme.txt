@@ -1,3 +1,4 @@
+0. cd into the directory containing the scripts
 1. start server.py
 2. user runs ransomware.py
 3. key is sent to server
