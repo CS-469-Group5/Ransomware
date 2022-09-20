@@ -12,7 +12,7 @@ You can use 0.0.0.0 as your IP address to establish a connection if this is done
 If it is between two machines on the same wifi, you can use `ifconfig` to find the private IP addresses.
 
 Once the IP addresses are set, run `python3 server.py` where it will begin listening for a connection.
-Afterwards, run `python3 client.py` to connect the two machines. From the server-side, you should receieve a 
+Afterwards, run `python3 client.py [IP]` to connect the two machines. From the server-side, you should receieve a 
 message that says the two are connected. You have successfully performed a reverse shell and can
 issue commands on the client/victim.
 
