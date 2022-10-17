@@ -1,0 +1,16 @@
+[package]
+name = "tools"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rsa = "0.6.1"
+walkdir = "2"
+
+[lib]
+name = "rw_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ransomware"
+path = "src/ransomware.rs"

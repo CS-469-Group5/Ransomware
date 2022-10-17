@@ -1,0 +1,13 @@
+/home/jlen/0-Projects/cs469/Ransomware/c2-server-linux/tools/target/debug/deps/spki-9ff1d83a66a3884c.rmeta: /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/lib.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/algorithm.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/error.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/spki.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/traits.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/document.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/../README.md
+
+/home/jlen/0-Projects/cs469/Ransomware/c2-server-linux/tools/target/debug/deps/libspki-9ff1d83a66a3884c.rlib: /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/lib.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/algorithm.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/error.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/spki.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/traits.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/document.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/../README.md
+
+/home/jlen/0-Projects/cs469/Ransomware/c2-server-linux/tools/target/debug/deps/spki-9ff1d83a66a3884c.d: /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/lib.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/algorithm.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/error.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/spki.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/traits.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/document.rs /home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/../README.md
+
+/home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/lib.rs:
+/home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/algorithm.rs:
+/home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/error.rs:
+/home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/spki.rs:
+/home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/traits.rs:
+/home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/document.rs:
+/home/jlen/.cargo/registry/src/github.com-1ecc6299db9ec823/spki-0.5.4/src/../README.md:

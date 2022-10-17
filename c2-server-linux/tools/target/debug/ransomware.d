@@ -1,0 +1,1 @@
+/home/jlen/0-Projects/cs469/Ransomware/c2-server-linux/tools/target/debug/ransomware: /home/jlen/0-Projects/cs469/Ransomware/c2-server-linux/tools/src/lib.rs /home/jlen/0-Projects/cs469/Ransomware/c2-server-linux/tools/src/ransomware.rs

