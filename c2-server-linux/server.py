@@ -8,8 +8,8 @@ SERVER_HOST = sys.argv[1] # "0.0.0.0" for localhost
 SERVER_PORT = 5050
 BUFFER_SIZE = 1024
 
-key = "openssl/priv.pem"
-certificate = "openssl/cert.crt"
+key = "ssl/priv.pem"
+certificate = "ssl/cert.crt"
 def main():
 
     '''

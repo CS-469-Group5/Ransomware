@@ -11,7 +11,7 @@ BUFFER_SIZE = 1024
 # create socket object and connect
 s = socket.socket()
 s.connect((SERVER_HOST, SERVER_PORT))
-ssl_sock = ssl.wrap_socket(s, cert_reqs=ssl.CERT_REQUIRED, ca_certs='openssl/cert.crt')
+ssl_sock = ssl.wrap_socket(s, cert_reqs=ssl.CERT_REQUIRED, ca_certs='ssl/cert.crt')
 def main():
     while True:
         # receive command from server
