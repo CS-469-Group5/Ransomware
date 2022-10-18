@@ -3,7 +3,7 @@
 ## NOTE - Still a work in progress
 
 ### What Is This?
-This uses secure sockets to perform a reverse shell on the client. 
+This uses secure sockets to connect to a client and perform a reverse shell.
 
 ### How To Use
 For localhost:
