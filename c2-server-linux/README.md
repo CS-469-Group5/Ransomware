@@ -6,6 +6,9 @@
 This uses secure sockets to connect to a client and perform a reverse shell.
 
 ### How To Use
+
+Generate the keys for SSL: ```sh ssl/generate_key.sh```
+
 For localhost:
 
 Start the server: ```python3 server.py 0.0.0.0```
