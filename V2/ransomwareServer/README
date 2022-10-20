@@ -1,0 +1,3 @@
+Server must have cert.crt and priv.pem file to run. These are generated using generateKey from generateCerts directory or copied over from me. Password is "1234" for mine.
+Once these are created the server can be ran using "python server.py 0.0.0.0". It will wait for responses from clients and recieve encryption keys and client
+IDs from them. Once recieved, it will create a file that is unique to each client. Client ID is a 128bit random number using pythons UUID library.
