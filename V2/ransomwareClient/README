@@ -1,0 +1,8 @@
+ransomware.py will only encrypt data if it can connect to the server. Ransomware first runs through target directory
+and forms a list of target file paths and a list of encrypted file paths. If encrypted file paths are found, a flag is set
+to 1 and 0 if no encrypted files are found. If the flag is 0 and the id.id file is not present then the ransomware
+attempts to connect to the server, if it does, then the ID is generated, and wrote to a file. The ID and encryption
+key are sent to the server as storage. The program then closes connection and begins encrypting files. Once done, a popup
+window tells the user they have been hacked.
+
+Once the program is ran again it asks the user for a key, the user only recieves the key once payment is made
